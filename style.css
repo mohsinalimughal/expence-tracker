@@ -97,27 +97,18 @@ h1{
     border-top-left-radius: 0.3vw;
     border-bottom-left-radius: 0.3vw;
     border-bottom: 1.5px solid black;
+    border-top: 1.5px solid black;
     transition: 0.3s;
+    padding-right: 0;
 }
-.minus:hover{
-    display: flex;
-    justify-content: space-between;
-    width: 20vw;
-    border-left: 5px solid red;
-    height: 3.5vw;
-    align-items: center;
-    margin: 1vw;
-    background-color: white;
-    padding: 1vw;
-    border-top-left-radius: 0.3vw;
-    border-bottom-left-radius: 0.3vw;
-    border-bottom: 1.5px solid black;
-}
+
 #deletebtn{
     font-size: 1vw;
 }
 .plus{
     border-bottom: 1.5px solid black;
+    border-right: 1.5px solid black;
+    border-top: 1.5px solid black;
     display: flex;
     justify-content: space-between;
     width: 20vw;
@@ -130,27 +121,41 @@ h1{
     border-top-left-radius: 0.3vw;
     border-bottom-left-radius: 0.3vw;
     transition: 0.3s;
+    position: relative;
+    padding-right: 0;
 }
-.plus:hover{
-    border-bottom: 1.5px solid black;
+#dltbtn{
     display: flex;
-    justify-content: space-between;
-    width: 20vw;
-    border-left: 5px solid green;
-    height: 3.5vw;
+    justify-content: center;
     align-items: center;
-    margin: 1vw;
-    background-color: white;
-    padding: 1vw;
-    border-top-left-radius: 0.3vw;
-    border-bottom-left-radius: 0.3vw;
+    background-color: rgb(255, 255, 255);
+    color: red;
+    font-size: 1vw;
+    height: 3vw;
+    width: 3vw;
+    transition: 0.3s;
+    opacity: 0.5;
 }
+#dltbtn:hover{
+    background-color: rgb(248, 248, 248);
+    color: red;
+    font-size: 1.2vw;
+    height: 2.8vw;
+    width: 3vw;
+    opacity: 1;
+}
+
+
+
 .add-new{
     display: flex;
     flex-direction: column;
     gap: 1vw;
-    margin: 2vw;
+    margin: 1vw;
+    padding-top: 2vw;
     font-size: 1.3vw;
+    border-top: 1px solid black;
+    width: 50%;
 }
 .main>h4{
     font-size: 1.5vw;
@@ -260,6 +265,18 @@ input{
         margin: 0vw;
         font-size: 4vw;
         font-weight: 700;
+    }
+    #dltbtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        color: red;
+        font-size: 5vw;
+        height: 3vw;
+        width: 3vw;
+        transition: 0.3s;
+        opacity: 0.5;
     }
     .minus{
         display: flex;

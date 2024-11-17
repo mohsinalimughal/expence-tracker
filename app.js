@@ -111,8 +111,9 @@ const renderHistory = ()=>{
                        historyList.innerHTML += `
              <li class="plus">
                    <p id="discription-list">${item.text}</p>
-                   <button id="deletebtn" onclick="deletepressed(${index})" >delete</button>
+                 
                    <p id="amount-list">$${item.amount}</p>
+                   <span id="dltbtn" onclick="deletepressed(${index})"><i class="fa-solid fa-trash trash"></i></span>
              </li>
            `
            incTotal = incTotal + +item.amount
@@ -121,9 +122,9 @@ const renderHistory = ()=>{
                 historyList.innerHTML += `
                 <li class="minus">
                       <p id="discription-list">${item.text}</p>
-                      <button id="deletebtn" onclick="deletepressed(${index})" >delete</button>
                       <p id="amount-list">$${item.amount}</p>
-                </li>
+                      <span id="dltbtn" onclick="deletepressed(${index})"><i class="fa-solid fa-trash trash"></i></span>
+                      </li>
               `
               expTotal =  expTotal + +item.amount
             }
