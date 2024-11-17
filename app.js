@@ -8,14 +8,12 @@ const alert1 = document.querySelector(".alert")
 const incomeDiv = document.querySelector(".incomediv")
 const expenceDiv = document.querySelector(".expencediv")
 const balanceDiv = document.querySelector(".balancediv")
+const deletebtn = document.querySelector("#deletebtn")
 
 const historyArray = []
 
 
 addnewbtn.addEventListener("click",()=>{
-    var expTotal = 0
-    var incTotal = 0
-    var balanceTotal = 0
     historyList.innerHTML = ``
     alert1.innerHTML = ``
     console.log("add new btn clicked")
@@ -29,10 +27,6 @@ addnewbtn.addEventListener("click",()=>{
     }else if(discriptionText.value === ""){
       alert1.innerHTML = `Enter Valid description !`
     }
-
-
-
-
 
 // pusshing transactions in array according to thier types....................!
 
@@ -55,14 +49,69 @@ addnewbtn.addEventListener("click",()=>{
           historyArray.push(transaction)
         }}
 
+        renderHistory()
 
+      }
 // Rendering transactions from array .................!
+)
 
-          historyArray.map((item)=>{
+// deletebtn.addEventListener("click",()=>{
+  //   console.log("Delete pressed")
+// })
+const deletepressed = (index)=>{
+  console.log("okay pressed" + index)
+  historyArray.splice(index,1)
+  renderHistory()
+  console.log("index of button"+index)
+  // if(type==="expence"){
+    //      expTotal = expTotal + +amount
+  // }else if(type==="income"){
+  //   expTotal = expTotal - +amount
+  // }
+  
+
+  // // Rendering transactions from array .................!
+  
+  // historyArray.map((item,index)=>{
+  //   if(item.type === "income"){
+    //              historyList.innerHTML += `
+    //    <li class="plus">
+    //          <p id="discription-list">${item.text}</p>
+  //          <button id="deletebtn" onclick="deletepressed(${index})" >delete</button>
+  //          <p id="amount-list">$${item.amount}</p>
+  //    </li>
+  //  `
+  //  incTotal = incTotal + +item.amount
+   
+  //   }else{
+    //       historyList.innerHTML += `
+  //       <li class="minus">
+  //             <p id="discription-list">${item.text}</p>
+  //             <button id="deletebtn" onclick="deletepressed(${index})" >delete</button>
+  //             <p id="amount-list">$${item.amount}</p>
+  //       </li>
+  //     `
+  //     expTotal =  expTotal + +item.amount
+  //   }
+  // })
+  
+  
+  // balanceTotal = incTotal + expTotal
+  // balanceDiv.innerHTML = `$ ${balanceTotal}`
+  // incomeDiv.innerHTML = `$ ${incTotal}`
+  // expenceDiv.innerHTML = `$ ${expTotal}`
+}
+const renderHistory = ()=>{
+            historyList.innerHTML = ``
+                var expTotal = 0
+                var incTotal = 0
+                var balanceTotal = 0
+          historyArray.map((item,index)=>{
             if(item.type === "income"){
                        historyList.innerHTML += `
              <li class="plus">
                    <p id="discription-list">${item.text}</p>
+                   <button id="deletebtn" onclick="deletepressed(${index})" >delete</button>
                    <p id="amount-list">$${item.amount}</p>
              </li>
            `
@@ -72,6 +121,7 @@ addnewbtn.addEventListener("click",()=>{
                 historyList.innerHTML += `
                 <li class="minus">
                       <p id="discription-list">${item.text}</p>
+                      <button id="deletebtn" onclick="deletepressed(${index})" >delete</button>
                       <p id="amount-list">$${item.amount}</p>
                 </li>
               `
@@ -79,16 +129,13 @@ addnewbtn.addEventListener("click",()=>{
             }
           })
           
-          console.log("income total" + incTotal)
-          console.log("exp total" + expTotal)
-    
-
-      balanceTotal = incTotal + expTotal
+    balanceTotal = incTotal + expTotal
     balanceDiv.innerHTML = `$ ${balanceTotal}`
     incomeDiv.innerHTML = `$ ${incTotal}`
     expenceDiv.innerHTML = `$ ${expTotal}`
     amountTextt.value = ``
     discriptionText.value = ``
-})
+    console.log(historyArray)
+}
 
 
