@@ -13,38 +13,39 @@
         <img class="calculatorpng" src="https://i.ibb.co/jfScDTC/budget.png" alt="">
         <div class="balance">
             <h2>YOUR BALANCE</h2>
-            <p>$ 600</p>
+            <p class="balancediv">$ 600</p>
         </div>
     </div>
         <div class="inc-exp-box">
             <div class="inc-box">
                 <h4>INCOME</h4>
-                <p>$ 600</p>
+                <p class="incomediv">$ 600</p>
             </div>
             <div class="exp-box">
                 <h4>EXPENCE</h4>
-                <p>$ 300</p>
+                <p class="expencediv">$ 300</p>
             </div>
         </div>
         <h4>HISTORY</h4>
         <ul class="history-list">
-          <li class="minus">
+          <!-- <li class="minus">
              <p id="discription-list">flower</p>
              <p id="amount-list">600$</p>
           </li>
           <li class="plus">
              <p>flower</p>
              <p>600$</p>
-          </li>
+          </li> -->
         </ul>
         <h4>ADD NEW TRANSACTION</h4>
         <div class="add-new">
             <label for="">Description</label>
-            <input id="discription-text" type="text">
+            <input id="discription-text" placeholder="Enter description..!" type="text">
             <label for="">Amount</label>
             <label for="">(-100 = expense, 100 = income)</label>
-            <input type="number" name="" id="amount-text">
+            <input type="number"  placeholder="Enter amount..!" name="" id="amount-text">
             <button id="add-new-btn" class="add-new-btn">Add transaction</button>
+            <div class="alert">  </div>
         </div>
      
 

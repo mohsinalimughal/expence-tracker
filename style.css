@@ -8,49 +8,81 @@ body{
     background-color: #E5E6ED;
 }
 .main{
-    width: 80vw;
+    width: 45vw;
     height: 100%;
     margin: auto;
-    padding: 3vw;
+    padding-top: 1vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* border: 1px solid black; */
+    border-radius: 1vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    background-color: white;
+    box-shadow: 1px 1px 5px gray;
 }
 h1{
     text-align: center;
-    margin: 2vw;
+    margin: 1vw;
+    font-size: 2.3vw;
 }
 .head{
+    font-size: 1.2vw;
     display: flex;
+    width: 70%;
+    /* border: 1px solid black; */
     justify-content: center;
     align-items: center;
 }
 .head>img{
-    width: 5vw;
+    width: 7vw;
+    height: auto;
 }
 .balance{
-    margin: 3vw;
+    margin: 2vw;
+    width: 60vw;
+
+}
+.balance p{
+    font-size: 1.8vw;
+    margin-top: 1vw;
+    font-style: oblique;
 }
 .inc-exp-box{
+    font-size: 1.3vw;
     display: flex;
     background-color: white;
     border-radius: 0.2vw;
     padding: 1vw;
-    width: 20vw;
+    width: 50%;
     justify-content: center;
     box-shadow: 0.5px 0.5px 1px black;
-    margin: 3vw;
+    margin: 2vw;
 }
 .inc-box{
     padding: 0.5vw;
     border-right: 2px solid black;
+    padding-right: 2vw;
+}
+.inc-box p{
+      margin-top: 0.5vw;
+      color: green;
+      font-weight: 700;
 }
 .exp-box{
     padding: 0.5vw;
+    margin-left: 2vw;
+}
+.exp-box p{
+    margin-top: 0.5vw;
+    color: red;
+    font-weight: 700;
 }
 .history-list{
     border-top: 1px solid black;
-    margin: 2vw;
+    margin: 1vw;
+    font-size: 1.3vw;
 }
 .minus{
     display: flex;
@@ -64,8 +96,10 @@ h1{
     padding: 1vw;
     border-top-left-radius: 0.3vw;
     border-bottom-left-radius: 0.3vw;
+    border-bottom: 1.5px solid black;
 }
 .plus{
+    border-bottom: 1.5px solid black;
     display: flex;
     justify-content: space-between;
     width: 20vw;
@@ -83,14 +117,22 @@ h1{
     flex-direction: column;
     gap: 1vw;
     margin: 2vw;
+    font-size: 1.3vw;
+}
+.main>h4{
+    font-size: 1.5vw;
 }
 input{
-    height: 2vw;
+    padding: 0.7vw;
+    height: 3vw;
     border-radius: 0.2vw;
     border: 0.1px solid black;
+    font-size: 1.1vw;
 }
 .add-new-btn{
-    background-color: blue;
+    background-color: rgb(40, 40, 46);
     color: white;
-    height: 2vw;
+    height: 3vw;
+    border-radius: 0.5vw;
+    font-size: 1.1vw;
 }
