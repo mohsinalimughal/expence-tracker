@@ -5,9 +5,15 @@
     font-family: sans-serif;
 }
 body{
-    background-color: #E5E6ED;
+    background-color: #d8d8db;
 }
 .main{
+    background: rgba(255, 255, 255, 0.54);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.2px);
+-webkit-backdrop-filter: blur(8.2px);
+border: 1px solid rgba(255, 255, 255, 0.3);
     width: 45vw;
     height: 100%;
     margin: auto;
@@ -19,8 +25,8 @@ body{
     border-radius: 1vw;
     margin-top: 2vw;
     margin-bottom: 2vw;
-    background-color: white;
-    box-shadow: 1px 1px 5px gray;
+    /* background-color: white;
+    box-shadow: 1px 1px 5px gray; */
 }
 h1{
     text-align: center;
@@ -185,6 +191,12 @@ input{
 
 @media (max-width:700px)  {
     .main{
+        background: rgba(255, 255, 255, 0.54);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.2px);
+-webkit-backdrop-filter: blur(8.2px);
+border: 1px solid rgba(255, 255, 255, 0.3);
         width: 80vw;
         /* height: 85vh; */
         margin: auto;
@@ -196,8 +208,8 @@ input{
         border-radius: 1vw;
         margin-top: 10vw;
         margin-bottom: 2vw;
-        background-color: white;
-        box-shadow: 1px 1px 5px gray;
+        /* background-color: white;
+        box-shadow: 1px 1px 5px gray; */
         padding-bottom: 6vw;
     }
     h1{
